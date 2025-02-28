@@ -11,6 +11,9 @@ exit 1
 echo "SQL installtion----passed"
 fi
 }
+
+git install mysql -y $>> $logfile
+validate $? "SQL" 
 if [ id -ne 0 ]
 then
 echo "your not root user, please access with root user "
@@ -19,5 +22,4 @@ else
 echo "yoiur root user"
 fi
 
-git install mysql -y $>> $logfile
-validate $? "SQL" 
+
