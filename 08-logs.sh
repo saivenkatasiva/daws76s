@@ -13,12 +13,12 @@ fi
 }
 
 
-if [ id -ne 0 ]
+if [ $ID -ne 0 ]
 then
 echo "your not root user, please access with root user "
 exit 1
 else
-echo "yoiur root user"
+echo "your root user"
 fi
 
 git install mysql -y $>> $logfile
