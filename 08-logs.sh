@@ -9,10 +9,10 @@ N="\e[0m"
 validate(){
 if [ $1 -ne 0 ]
 then
-echo "$2 installtion----$R failed"
+echo -e "$2 installtion----$R failed"
 exit 1
 else
-echo "$2 installtion----$G success"
+echo -e "$2 installtion----$G success"
 fi
 }
 
