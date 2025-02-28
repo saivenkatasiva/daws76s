@@ -21,6 +21,6 @@ else
 echo "your root user"
 fi
 
-git install mysql -y &>> $logfile
+yum install mysql -y &>> $logfile
 validate $? "SQL" 
 
