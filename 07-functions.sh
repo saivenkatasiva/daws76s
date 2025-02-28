@@ -15,8 +15,8 @@ if [ $ID -ne 0 ]
 then
 echo "your not root user, Please run with root user access"
 else
-exit 127
 echo "your root user"
+exit 127
 fi
 
 yum install mysql -y
