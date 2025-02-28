@@ -2,14 +2,17 @@
 ID=$(id -u)
 timestamp=$(date +%F-%H-%M-%S)
 logfile="/tmp/$0-$timestamp-log"
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 
 validate(){
 if [ $1 -ne 0 ]
 then
-echo "$2 installtion----failed"
+echo "$2 installtion----$R failed"
 exit 1
 else
-echo "$2 installtion----passed"
+echo "$2 installtion----$G success"
 fi
 }
 
