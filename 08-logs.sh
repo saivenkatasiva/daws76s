@@ -8,6 +8,7 @@ if [ $1 -ne 0 ]
 then
 echo "$2 installtion----failed"
 exit 1
+else
 echo "$2 installtion----passed"
 fi
 }
