@@ -9,3 +9,10 @@
  fi
 
 yum install mysql -y
+if [ $? -ne 0 ]
+then
+echo "ERROR : sql installation failed "
+exit 127
+else
+echo "sql installation success"
+fi
