@@ -8,7 +8,6 @@ exit 127
 else
 echo "$2 installation SUCCESS"
 fi
-
 }
 
 if [ $ID -ne 0 ]
