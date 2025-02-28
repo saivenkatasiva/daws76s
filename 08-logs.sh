@@ -8,7 +8,7 @@ if [ $1 -ne 0 ]
 then
 echo "$2 installtion----failed"
 exit 1
-echo "SQL installtion----passed"
+echo "$2 installtion----passed"
 fi
 }
 
@@ -21,6 +21,6 @@ else
 echo "your root user"
 fi
 
-git install mysql -y $>> $logfile
+git install mysql -y &>> $logfile
 validate $? "SQL" 
 
