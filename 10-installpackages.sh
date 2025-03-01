@@ -10,9 +10,9 @@ logfile="tmp/$0-$timestamp-log"
 validate(){
 if [ $1 -ne 0 ]
 then
-echo "error : $2 installation failed"
+echo -e  "$R error : $2 installation failed $N"
 else
-echo "error : $2 installation Success"
+echo -e "$R $2 installation Success$N"
 fi
 }
 
@@ -23,12 +23,6 @@ exit 1
 else
 echo -e "$G your root user $N"
 fi
-
-yum install mysql -y &>> $logfile
-validate $? "MYSQL"
-
-yum install git -y &>> $logfile
-validate $? "git"
 
 for package in $@
 do
