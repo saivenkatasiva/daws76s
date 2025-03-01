@@ -5,7 +5,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 timestamp=$(date +%F-%H-%M-%S)
-logfile="tmp/$0-$timestamp-log"
+logfile="/tmp/$0-$timestamp-log"
 
 validate(){
 if [ $1 -ne 0 ]
@@ -26,10 +26,12 @@ fi
 
 for package in $@
 do
-yum list installed $package
+yum list installed $package &>> $logfile
 if [ $? ne 0 ]
 then
 yum install $package -y 
 validate $? "$package"
+else
+echo "$package already installed"
 fi
 done
