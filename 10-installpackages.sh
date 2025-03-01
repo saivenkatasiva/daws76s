@@ -30,6 +30,6 @@ yum list installed $package
 if [ $? ne 0 ]
 then
 yum install $package -y 
-validate $? "MYSQL"
+validate $? "$package"
 fi
 done
