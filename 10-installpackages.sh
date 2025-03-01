@@ -27,7 +27,7 @@ fi
 for package in $@
 do
 yum list installed $package &>> $logfile
-if [ $? ne 0 ]
+if [ $? -ne 0 ]
 then
 yum install $package -y 
 validate $? "$package"
